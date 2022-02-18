@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-12">
+  
+  
+      <% flash.get('mensaje').forEach(function (msg) { %>
+      <div class="alert alert-success" role="alert">
+        <%=msg%>
+      </div>
+      <% }) %>
+  
+      <h2>Órdenes</h2>
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>fecha</th>
+            <th>total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% ordenes.forEach( orden => { %>
+            <tr>
+              <td><a href="/admin/detalle-orden/<%=orden.id%>"><%= orden.id %></a></td>
+              <td><%= orden.fecha %></td>
+              <td><%= orden.total %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+  
+      
+  
+    </div>
+  
+  </div>

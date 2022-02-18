@@ -1,0 +1,8 @@
+<h1>Contacto</h1>
+<p>
+    <ul>
+        <% clientes.forEach( cliente => { %>
+            <li><%= cliente.nombre %> - Mail de Contacto: <%= cliente.email %></li>
+        <% }) %>
+    </ul>
+</p>
